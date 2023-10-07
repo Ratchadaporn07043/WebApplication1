@@ -1,6 +1,6 @@
 ﻿@page
 @using Microsoft.Data.SqlClient;
- 
+
 @{
     try
     {
@@ -13,7 +13,7 @@
             String sql = "DELETE FROM STOCKS WHERE itemid=@itemid";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
-                command.Parameters.AddWithValue("@item",itemid);
+                command.Parameters.AddWithValue("@item", itemid);
 
                 command.ExecuteNonQuery();
             }
@@ -26,5 +26,6 @@
 
     }
 
-    Response.Redirect("/Rangsit/IndexRangsit");
+    Response.Redirect("/Siam/IndexSiam");
 }
+
